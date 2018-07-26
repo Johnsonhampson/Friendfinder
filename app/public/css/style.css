@@ -1,0 +1,22 @@
+body {
+	margin: 0px auto; 
+	background-image: url("https://servenomaster-ppye3aki.netdna-ssl.com/wp-content/uploads/2016/09/DealingWithDepression.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+ }
+
+ .container {
+	 background-color: lightgray;
+	 width: 80%;
+ }
+
+ .homecontainer{
+	 opacity: 0.9;
+}
+ header {
+ 	height: 100px;
+ }
+
