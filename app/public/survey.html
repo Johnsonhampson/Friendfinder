@@ -9,33 +9,37 @@
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
 	 crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
 
 </head>
 
 <body>
 
-	<div class="container">
+	<div class="container survContainer">
 
 		<h1>Survey Questions:</h1>
 		<div class="divider"></div>
 
+		<h5>
+			<b>Name:</b>
+		</h5>
+		<input type="text" class="validate" placeholder="Your Name Here (required)" id="userName">
+
+		<h5>
+			<b>Photo Image Link:</b>
+		</h5>
+		<input type="text" class="validate" placeholder="Photo Link Here (required)" id="userPhoto">
+
 		<h5>Please enter how much you agree or disagree with the following statements...</h5>
-
-		<h5><b>Name:</b></h5>
-		<input type="text" class="validate" placeholder="Your Name Here" id="userName">
-
-		<h5><b>Photo Image Link:</b></h5>
-		<input type="text" class="validate" placeholder="Photo Link Here" id="userPhoto">
-		
 
 	</div>
 	<hr>
 	<div class="container">
 		<!-- Survey Questions -->
-		<div class="input-field ">
+		<div class="input-field">
 			<h5>1. Have you been known to talk a lot?</h5>
 			<select id="question1">
 				<option value="" disabled selected>Choose your option</option>
@@ -46,7 +50,7 @@
 				<option value="5">Strongly Agree</option>
 			</select>
 		</div>
-		<div class="input-field ">
+		<div class="input-field">
 			<h5>2. Do you get upset easily?</h5>
 			<select id="question2">
 				<option value="" disabled selected>Choose your option</option>
@@ -57,7 +61,7 @@
 				<option value="5">Strongly Agree</option>
 			</select>
 		</div>
-		<div class="input-field ">
+		<div class="input-field">
 			<h5>3. You can always drink your problems away?</h5>
 			<select id="question3">
 				<option value="" disabled selected>Choose your option</option>
@@ -68,7 +72,7 @@
 				<option value="5">Strongly Agree</option>
 			</select>
 		</div>
-		<div class="input-field ">
+		<div class="input-field">
 			<h5>4. When someone is stressed they should have a smoke?</h5>
 			<select id="question4">
 				<option value="" disabled selected>Choose your option</option>
@@ -79,7 +83,7 @@
 				<option value="5">Strongly Agree</option>
 			</select>
 		</div>
-		<div class="input-field ">
+		<div class="input-field">
 			<h5>5. You prefer driving everywhere to flying?</h5>
 			<select id="question5">
 				<option value="" disabled selected>Choose your option</option>
@@ -90,7 +94,7 @@
 				<option value="5">Strongly Agree</option>
 			</select>
 		</div>
-		<div class="input-field ">
+		<div class="input-field">
 			<h5>6. Game of thrones is overrated.</h5>
 			<select id="question6">
 				<option value="" disabled selected>Choose your option</option>
@@ -101,7 +105,7 @@
 				<option value="5">Strongly Agree</option>
 			</select>
 		</div>
-		<div class="input-field ">
+		<div class="input-field">
 			<h5>7. Pineapples don't belong on pizza.</h5>
 			<select id="question7">
 				<option value="" disabled selected>Choose your option</option>
@@ -112,18 +116,18 @@
 				<option value="5">Strongly Agree</option>
 			</select>
 		</div>
-		<div class="input-field ">
+		<div class="input-field">
 			<h5>8. Would rather sleep than go outside with friends.</h5>
 			<select id="question8">
 				<option value="" disabled selected>Choose your option</option>
-				<option value="1">Strongly Disagree</option>
+				<option value="1"> Strongly Disagree</option>
 				<option value="2">Disagree</option>
 				<option value="3">Neutral</option>
 				<option value="4">Agree</option>
 				<option value="5">Strongly Agree</option>
 			</select>
 		</div>
-		<div class="input-field ">
+		<div class="input-field">
 			<h5>9. Winter is the best season.</h5>
 			<select id="question9">
 				<option value="" disabled selected>Choose your option</option>
@@ -134,7 +138,7 @@
 				<option value="5">Strongly Agree</option>
 			</select>
 		</div>
-		<div class="input-field ">
+		<div class="input-field">
 			<h5>10. Drinking coffee everyday is not very good for you.</h5>
 			<select id="question10">
 				<option value="" disabled selected>Choose your option</option>
@@ -173,10 +177,10 @@
 		$(document).ready(function () {
 			$('select').material_select();
 			$('.modal').modal({
-				opacity: .5, 
+				opacity: .5,
 			});
 		});
-		
+
 		$('#submitButton').on('click', function (event) {
 			event.preventDefault();
 			var userInput = {

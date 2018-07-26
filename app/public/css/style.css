@@ -15,7 +15,18 @@ body {
 
  .homecontainer{
 	 opacity: 0.9;
+	 background-color: beige;
 }
+
+.survContainer{
+	background-color: teal;
+	opacity: 0.9;
+}
+
+#listselect {
+	color:black;
+}
+
  header {
  	height: 100px;
  }
